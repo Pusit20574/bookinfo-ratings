@@ -8,7 +8,7 @@ metadata:
   namespace: student76-bookinfo-uat
 spec:
   rules:
-  - host: bookinfo.dev.opsta.net
+  - host: bookinfo.uat.opsta.net
     http:
       paths:
       - path: /student76/ratings(/|$)(.*)
