@@ -15,13 +15,13 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
-        ...
+        
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
           push: true
           tags: user/app:latest
-        ...
+        
       - run: docker build -t ghcr.io/pusit20574/bookinfo-ratings:dev .
       - run: docker images
       - run: echo ${{secrets.GITHUB_TOKEN}} | docker login gchr.io -u ${{ github.actor }} --password-stdin
