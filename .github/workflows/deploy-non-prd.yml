@@ -1,4 +1,4 @@
-name: deploy-non-prd
+name: deploy-non-prd2
 on:
   push:
     branches:
@@ -58,4 +58,4 @@ jobs:
       - name: Checkout health check page
         run: curl http://bookinfo.${{ env.ENV_NAME }}.opsta.net/student76/ratings/health | grep "Ratings is working"
 
-        name: deploy-non-prd
+        name: deploy-non-prd 
